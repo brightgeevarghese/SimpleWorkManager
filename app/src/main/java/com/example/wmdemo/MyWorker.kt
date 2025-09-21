@@ -13,10 +13,10 @@ class MyWorker(context: Context, workerParams: WorkerParameters) : Worker(contex
                     Log.d("MyWorker", "Worker stopped")
                     return Result.failure()
                 }
-                if (i % 10 == 0) {
-                    Log.d("MyWorker", "throw error at $i")
-                    throw Exception("Error at $i")
-                }
+//                if (i % 10 == 0) {
+//                    Log.d("MyWorker", "throw error at $i")
+//                    throw Exception("Error at $i")
+//                }
                 println("Hello from worker $i")
                 Thread.sleep(1000)
                 Log.d("MyWorker", "Hello from worker $i")
